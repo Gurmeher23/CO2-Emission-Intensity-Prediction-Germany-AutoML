@@ -1,0 +1,11 @@
+# Insert your ENTSO-E API key here
+entsoe-key: "YOUR_ENTSOE_API_KEY"
+
+# Insert your BMRS API key here
+bmrs-key: YOUR_BMRS_API_KEY
+
+influxdb:
+  host: localhost
+  database: cosema
+  username: root
+  password: root

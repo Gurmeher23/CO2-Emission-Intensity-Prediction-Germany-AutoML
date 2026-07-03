@@ -1,0 +1,59 @@
+version: "3.9"
+services:
+  influxdb:
+    image: influxdb:1.8-alpine
+    platform: linux/amd64  # Add this to force compatibility
+    container_name: influxdb
+    restart: always
+    volumes:
+      - ./cosema-db/influxdb:/var/lib/influxdb
+    ports:
+      - "8086:8086"
+    environment:
+      - INFLUXDB_DB=cosema
+      - INFLUXDB_HTTP_AUTH_ENABLED=true
+      - INFLUXDB_ADMIN_USER=root
+      - INFLUXDB_ADMIN_PASSWORD=root
+      - INFLUXDB_META_DIR=/var/lib/influxdb/meta2
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "3"
+
+  grafana:
+    image: grafana/grafana-oss:9.2.15
+    platform: linux/amd64  # Add this to force compatibility
+    container_name: grafana
+    user: "104"
+    depends_on:
+      - influxdb
+    ports:
+      - 3010:3000
+    environment:
+      GF_SECURITY_ALLOW_EMBEDDING: "true"
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_INSTALL_PLUGINS: "marcusolsson-dynamictext-panel"
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: "cosema"
+      GF_RENDERING_SERVER_URL: http://renderer:8081/render
+      GF_RENDERING_CALLBACK_URL: http://grafana:3000/
+      GF_LOG_FILTERS: rendering:debug
+    volumes:
+      - ./docker_configs/grafana.ini:/etc/grafana/grafana.ini
+      - ./docker_configs/datasources:/etc/grafana/provisioning/datasources
+      - ./docker_configs/dashboards:/etc/grafana/provisioning/dashboards
+      - ./docker_configs/dashboard-definitions:/etc/grafana/provisioning/dashboard-definitions
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+
+  renderer:
+    image: grafana/grafana-image-renderer:latest
+    platform: linux/amd64  # Add this to force compatibility
+    profiles: ["enable-renderer"]
+    ports:
+      - 8081

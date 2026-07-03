@@ -1,0 +1,17 @@
+# config file version
+apiVersion: 1
+
+# list of datasources to insert/update depending
+# whats available in the database
+datasources:
+  # <string, required> name of the datasource. Required
+- name: COSEMA
+  type: influxdb
+  url: http://influxdb:8086
+  access: proxy
+  user: root
+  database: cosema
+  secureJsonData:
+    password: root
+  isDefault: true
+  editable: true

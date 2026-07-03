@@ -1,0 +1,23 @@
+# Secrets
+keys.yaml
+*.key
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Large artifacts (not tracked)
+Final/Models/
+Datasets/
+*.zip
+logs/
+cosema-db/

@@ -1,0 +1,5163 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 2,
+  "id": 1,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 33,
+      "panels": [],
+      "title": "Generation per type per country",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "P87FC6A58DBBB0300"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Capacity",
+            "axisPlacement": "auto",
+            "barAlignment": 1,
+            "drawStyle": "line",
+            "fillOpacity": 60,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 1,
+            "pointSize": 4,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "normal"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "megwatt"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Biomass"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#56a64b",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Hydro"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#3274d9",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Nuclear"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ff0000",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Lignite"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#967d64",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Hard_coal"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#323232",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "CCGT"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#fa964b",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Wind_onshore"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#afc4a5",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Wind_offshore"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#afc4a5",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Solar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#fade2a",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Others"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "text",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Oil"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "text",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Storage_ch"
+            },
+            "properties": [
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Storage_dis"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 1
+      },
+      "id": 60,
+      "options": {
+        "legend": {
+          "calcs": [
+            "min",
+            "max",
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "alias": "Hydro $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT mean(\"Generation [MW]\")\nFROM \"per_type_gen\"\nWHERE ((\"technology\" = 'Hydro Run-of-river and poundage' OR \"technology\" = 'Hydro Water Reservoir') AND \"country\" =~ /^$country$/) AND $timeFilter \nGROUP BY time(1h), \"country\" fill(null) \nORDER BY time DESC",
+          "rawQuery": true,
+          "refId": "Hydro",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Hydro"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Biomass $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT mean(\"Generation [MW]\") FROM \"Per_type_gen\" WHERE (\"technology\" = 'Biomass' AND \"country\" =~ /^$country$/) AND $timeFilter GROUP BY time(1h), \"country\" fill(null) ORDER BY time DESC",
+          "rawQuery": false,
+          "refId": "Biomass",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Biomass"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Nuclear $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "refId": "Nuclear",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Nuclear"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Lignite $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "refId": "Lignite",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Fossil Brown coal/Lignite"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Hard coal $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "refId": "Hard_coal",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Fossil Hard coal"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Gas $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT sum(\"Generation [MW]\") FROM \"Per_type_gen\" WHERE ((\"technology\" = 'Fossil Gas' OR \"technology\" = 'Fossil Coal-derived gas') AND \"country\" =~ /^$state$/) AND $timeFilter GROUP BY time(1h), \"country\" fill(null) ORDER BY time DESC",
+          "rawQuery": false,
+          "refId": "CCGT",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Fossil Gas"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Oil $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT mean(\"Generation [MW]\") FROM \"Per_type_gen\" WHERE (\"technology\" = 'Oil' AND \"country\" =~ /^$country$/) AND $timeFilter GROUP BY time(1h), \"country\" fill(null) ORDER BY time DESC",
+          "rawQuery": false,
+          "refId": "Oil",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Fossil Oil"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Other fossil $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT mean(\"Generation [MW]\")\nFROM \"per_type_gen\" WHERE ((\"technology\" = 'Fossil Coal-derived gas' OR \"technology\" = 'Fossil Oil shale' OR \"technology\" = 'Waste' OR \"technology\" = 'Other' OR \"technology\" = 'Fossil Peat') AND \"country\" =~ /^$country$/) AND $timeFilter \nGROUP BY time(1h), \"country\" fill(null) \nORDER BY time DESC",
+          "rawQuery": true,
+          "refId": "Others",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Fossil Coal-derived gas"
+            },
+            {
+              "condition": "OR",
+              "key": "technology",
+              "operator": "=",
+              "value": "Fossil Oil shale"
+            },
+            {
+              "condition": "OR",
+              "key": "technology",
+              "operator": "=",
+              "value": "Waste"
+            },
+            {
+              "condition": "OR",
+              "key": "technology",
+              "operator": "=",
+              "value": "Other"
+            },
+            {
+              "condition": "OR",
+              "key": "technology",
+              "operator": "=",
+              "value": "Fossil Peat"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Wind Onshore $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "refId": "Wind_onshore",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Wind Onshore"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Wind Offshore $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "refId": "Wind_offshore",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Wind Offshore"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Solar $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT sum(\"Total capacity\")  / 4 FROM \"Capacities\" WHERE (\"simulationID\" =~ /^$Scenario$/ AND \"technology\" = 'Renewable' AND \"UnitName\" = 'Solar [MW]') AND $timeFilter GROUP BY time(1h), \"technology\", \"UnitName\" fill(null) ORDER BY time DESC",
+          "rawQuery": false,
+          "refId": "Solar",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Solar"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Other VRE $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT mean(\"Generation [MW]\")\nFROM \"per_type_gen\" \nWHERE ((\"technology\" = 'Other renewable' OR \"technology\" = 'Geothermal' OR \"technology\" = 'Marine') AND \"country\" =~ /^$country$/) AND $timeFilter \nGROUP BY time(1h), \"country\" fill(null) \nORDER BY time DESC",
+          "rawQuery": true,
+          "refId": "Other VRE",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Other renewable"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Storage discharge $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT mean(\"Generation [MW]\")\nFROM \"per_type_gen\"\nWHERE (\"technology\" = 'Hydro Pumped Storage' AND \"country\" =~ /^$country$/) AND $timeFilter AND \"Generation [MW]\" >= 0\nGROUP BY time(1h), \"country\" fill(null)\nORDER BY time DESC",
+          "rawQuery": true,
+          "refId": "Storage_dis",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Hydro"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Storage charge $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT mean(\"Generation [MW]\")\nFROM \"per_type_gen\"\nWHERE (\"technology\" = 'Hydro Pumped Storage' AND \"country\" =~ /^$country$/) AND $timeFilter AND \"Generation [MW]\" < 0\nGROUP BY time(1h), \"country\" fill(null)\nORDER BY time DESC",
+          "rawQuery": true,
+          "refId": "Storage_ch",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Hydro"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        }
+      ],
+      "title": "Generation per type in $country (unbalanced)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "P87FC6A58DBBB0300"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Capacity",
+            "axisPlacement": "auto",
+            "barAlignment": 1,
+            "drawStyle": "line",
+            "fillOpacity": 60,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 1,
+            "pointSize": 4,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "normal"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "megwatt"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Biomass"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#56a64b",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Hydro"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#3274d9",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Nuclear"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#ff0000",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Lignite"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#967d64",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Hard_coal"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#323232",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "CCGT"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#fa964b",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Wind_onshore"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#afc4a5",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Wind_offshore"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#afc4a5",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Solar"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#fade2a",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Others"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "text",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Oil"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "text",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Storage_ch"
+            },
+            "properties": [
+              {
+                "id": "custom.stacking",
+                "value": {
+                  "group": "A",
+                  "mode": "normal"
+                }
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "Storage_dis"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 11
+      },
+      "id": 61,
+      "options": {
+        "legend": {
+          "calcs": [
+            "min",
+            "max",
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "alias": "Hydro $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT mean(\"Generation [MW]\")\nFROM \"per_type_gen_balanced\"\nWHERE ((\"technology\" = 'Hydro Run-of-river and poundage' OR \"technology\" = 'Hydro Water Reservoir') AND \"country\" =~ /^$country$/) AND $timeFilter \nGROUP BY time(1h), \"country\" fill(null) \nORDER BY time DESC",
+          "rawQuery": true,
+          "refId": "Hydro",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Hydro"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Biomass $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen_balanced",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT mean(\"Generation [MW]\") FROM \"Per_type_gen\" WHERE (\"technology\" = 'Biomass' AND \"country\" =~ /^$country$/) AND $timeFilter GROUP BY time(1h), \"country\" fill(null) ORDER BY time DESC",
+          "rawQuery": false,
+          "refId": "Biomass",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Biomass"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Nuclear $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "per_type_gen_balanced",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "refId": "Nuclear",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Nuclear"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Lignite $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen_balanced",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "refId": "Lignite",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Fossil Brown coal/Lignite"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Hard coal $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen_balanced",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "refId": "Hard_coal",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Fossil Hard coal"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Gas $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen_balanced",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT sum(\"Generation [MW]\") FROM \"Per_type_gen\" WHERE ((\"technology\" = 'Fossil Gas' OR \"technology\" = 'Fossil Coal-derived gas') AND \"country\" =~ /^$state$/) AND $timeFilter GROUP BY time(1h), \"country\" fill(null) ORDER BY time DESC",
+          "rawQuery": false,
+          "refId": "CCGT",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Fossil Gas"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Oil $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen_balanced",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT mean(\"Generation [MW]\") FROM \"Per_type_gen\" WHERE (\"technology\" = 'Oil' AND \"country\" =~ /^$country$/) AND $timeFilter GROUP BY time(1h), \"country\" fill(null) ORDER BY time DESC",
+          "rawQuery": false,
+          "refId": "Oil",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Fossil Oil"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Other fossil $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT mean(\"Generation [MW]\")\nFROM \"per_type_gen_balanced\" \nWHERE ((\"technology\" = 'Fossil Coal-derived gas' OR \"technology\" = 'Fossil Oil shale' OR \"technology\" = 'Waste' OR \"technology\" = 'Other' OR \"technology\" = 'Fossil Peat') AND \"country\" =~ /^$country$/) AND $timeFilter \nGROUP BY time(1h), \"country\" fill(null) \nORDER BY time DESC",
+          "rawQuery": true,
+          "refId": "Others",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Fossil Coal-derived gas"
+            },
+            {
+              "condition": "OR",
+              "key": "technology",
+              "operator": "=",
+              "value": "Fossil Oil shale"
+            },
+            {
+              "condition": "OR",
+              "key": "technology",
+              "operator": "=",
+              "value": "Waste"
+            },
+            {
+              "condition": "OR",
+              "key": "technology",
+              "operator": "=",
+              "value": "Other"
+            },
+            {
+              "condition": "OR",
+              "key": "technology",
+              "operator": "=",
+              "value": "Fossil Peat"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Wind Onshore $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen_balanced",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "refId": "Wind_onshore",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Wind Onshore"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Wind Offshore $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen_balanced",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "refId": "Wind_offshore",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Wind Offshore"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Solar $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen_balanced",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT sum(\"Total capacity\")  / 4 FROM \"Capacities\" WHERE (\"simulationID\" =~ /^$Scenario$/ AND \"technology\" = 'Renewable' AND \"UnitName\" = 'Solar [MW]') AND $timeFilter GROUP BY time(1h), \"technology\", \"UnitName\" fill(null) ORDER BY time DESC",
+          "rawQuery": false,
+          "refId": "Solar",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Solar"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Other VRE $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT mean(\"Generation [MW]\")\nFROM \"per_type_gen_balanced\" \nWHERE ((\"technology\" = 'Other renewable' OR \"technology\" = 'Geothermal' OR \"technology\" = 'Marine') AND \"country\" =~ /^$country$/) AND $timeFilter \nGROUP BY time(1h), \"country\" fill(null) \nORDER BY time DESC",
+          "rawQuery": true,
+          "refId": "Other VRE",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Other renewable"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Storage discharge $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT mean(\"Generation [MW]\")\nFROM \"per_type_gen_balanced\"\nWHERE (\"technology\" = 'Hydro Pumped Storage' AND \"country\" =~ /^$country$/) AND $timeFilter AND \"Generation [MW]\" >= 0\nGROUP BY time(1h), \"country\" fill(null)\nORDER BY time DESC",
+          "rawQuery": true,
+          "refId": "Storage_dis",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Hydro"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Storage charge $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "per_type_gen",
+          "orderByTime": "DESC",
+          "policy": "default",
+          "query": "SELECT mean(\"Generation [MW]\")\nFROM \"per_type_gen_balanced\"\nWHERE (\"technology\" = 'Hydro Pumped Storage' AND \"country\" =~ /^$country$/) AND $timeFilter AND \"Generation [MW]\" < 0\nGROUP BY time(1h), \"country\" fill(null)\nORDER BY time DESC",
+          "rawQuery": true,
+          "refId": "Storage_ch",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Generation [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "condition": "AND",
+              "key": "technology",
+              "operator": "=",
+              "value": "Hydro"
+            },
+            {
+              "condition": "AND",
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        }
+      ],
+      "title": "Generation per type in $country (balanced)",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 21
+      },
+      "id": 37,
+      "panels": [],
+      "title": "Demand per country",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "P87FC6A58DBBB0300"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "left",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "megwatt"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Forecasted demand"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Actual demand"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 24,
+        "x": 0,
+        "y": 22
+      },
+      "id": 35,
+      "options": {
+        "legend": {
+          "calcs": [
+            "min",
+            "max",
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "alias": "Actual demand $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "demand",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "Germany",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Demand [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Forecasted demand $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "demand_forecast",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Demand [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        }
+      ],
+      "title": "Demand in $country (unbalanced)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "P87FC6A58DBBB0300"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "left",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "megwatt"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Forecasted demand"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Actual demand"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 24,
+        "x": 0,
+        "y": 34
+      },
+      "id": 57,
+      "options": {
+        "legend": {
+          "calcs": [
+            "min",
+            "max",
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "alias": "Demand $tag_country",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "country"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "demand_balanced",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "Germany",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Demand [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "country",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        }
+      ],
+      "title": "Demand in $country (balanced)",
+      "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 46
+      },
+      "id": 49,
+      "panels": [],
+      "title": "Cross-border flows",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "P87FC6A58DBBB0300"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "left",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 3,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "megwatt"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Forecasted demand"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Actual demand"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 24,
+        "x": 0,
+        "y": 47
+      },
+      "id": 47,
+      "options": {
+        "legend": {
+          "calcs": [
+            "min",
+            "max",
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "alias": "Flow to $tag_to",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "to"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "cross_border_flow",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "Flow to",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Flow [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "sum"
+              },
+              {
+                "params": [
+                  " / 4"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "to",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Flow from $tag_from",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "from"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "cross_border_flow",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "Flow from",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Flow [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "sum"
+              },
+              {
+                "params": [
+                  " / 4"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "from",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        }
+      ],
+      "title": "Cross-border flows in/out $country (unbalanced)",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "Net flow",
+            "mode": "reduceRow",
+            "reduce": {
+              "include": [
+                "Flow to DE",
+                "Flow from DE"
+              ],
+              "reducer": "diff"
+            }
+          }
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "P87FC6A58DBBB0300"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "left",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 1,
+            "pointSize": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 3,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "megwatt"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 24,
+        "x": 0,
+        "y": 59
+      },
+      "id": 58,
+      "options": {
+        "legend": {
+          "calcs": [
+            "min",
+            "max",
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "alias": "Flow to $tag_to",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "to"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "cross_border_flow_balanced",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "Flow to",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Flow [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "sum"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "to",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        },
+        {
+          "alias": "Flow from $tag_from",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "1h"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "from"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "cross_border_flow_balanced",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "From",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Flow [MW]"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "sum"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "from",
+              "operator": "=~",
+              "value": "/^$country$/"
+            }
+          ]
+        }
+      ],
+      "title": "Cross-border flows in/out $country (balanced)",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "Net flow",
+            "mode": "reduceRow",
+            "reduce": {
+              "include": [
+                "Flow from DE",
+                "Flow to DE"
+              ],
+              "reducer": "diff"
+            }
+          }
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 71
+      },
+      "id": 55,
+      "panels": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "description": "",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "Capacity",
+                "axisPlacement": "auto",
+                "barAlignment": 1,
+                "drawStyle": "line",
+                "fillOpacity": 60,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "lineInterpolation": "smooth",
+                "lineStyle": {
+                  "fill": "solid"
+                },
+                "lineWidth": 1,
+                "pointSize": 1,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "normal"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  }
+                ]
+              },
+              "unit": "megwatt"
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byFrameRefID",
+                  "options": "Biomass"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#56a64b",
+                      "mode": "fixed"
+                    }
+                  },
+                  {
+                    "id": "custom.stacking",
+                    "value": {
+                      "group": "A",
+                      "mode": "normal"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byFrameRefID",
+                  "options": "Hydro"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#3274d9",
+                      "mode": "fixed"
+                    }
+                  },
+                  {
+                    "id": "custom.stacking",
+                    "value": {
+                      "group": "A",
+                      "mode": "normal"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byFrameRefID",
+                  "options": "Nuclear"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#ff0000",
+                      "mode": "fixed"
+                    }
+                  },
+                  {
+                    "id": "custom.stacking",
+                    "value": {
+                      "group": "A",
+                      "mode": "normal"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byFrameRefID",
+                  "options": "Lignite"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#967d64",
+                      "mode": "fixed"
+                    }
+                  },
+                  {
+                    "id": "custom.stacking",
+                    "value": {
+                      "group": "A",
+                      "mode": "normal"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byFrameRefID",
+                  "options": "Hard_coal"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#323232",
+                      "mode": "fixed"
+                    }
+                  },
+                  {
+                    "id": "custom.stacking",
+                    "value": {
+                      "group": "A",
+                      "mode": "normal"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byFrameRefID",
+                  "options": "CCGT"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#fa964b",
+                      "mode": "fixed"
+                    }
+                  },
+                  {
+                    "id": "custom.stacking",
+                    "value": {
+                      "group": "A",
+                      "mode": "normal"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byFrameRefID",
+                  "options": "Wind_onshore"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#afc4a5",
+                      "mode": "fixed"
+                    }
+                  },
+                  {
+                    "id": "custom.stacking",
+                    "value": {
+                      "group": "A",
+                      "mode": "normal"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byFrameRefID",
+                  "options": "Wind_offshore"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#afc4a5",
+                      "mode": "fixed"
+                    }
+                  },
+                  {
+                    "id": "custom.stacking",
+                    "value": {
+                      "group": "A",
+                      "mode": "normal"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byFrameRefID",
+                  "options": "Solar"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "#fade2a",
+                      "mode": "fixed"
+                    }
+                  },
+                  {
+                    "id": "custom.stacking",
+                    "value": {
+                      "group": "A",
+                      "mode": "normal"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byFrameRefID",
+                  "options": "Others"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "text",
+                      "mode": "fixed"
+                    }
+                  },
+                  {
+                    "id": "custom.stacking",
+                    "value": {
+                      "group": "A",
+                      "mode": "normal"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byFrameRefID",
+                  "options": "Oil"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "text",
+                      "mode": "fixed"
+                    }
+                  },
+                  {
+                    "id": "custom.stacking",
+                    "value": {
+                      "group": "A",
+                      "mode": "normal"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byFrameRefID",
+                  "options": "Other VRE"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "green",
+                      "mode": "fixed"
+                    }
+                  },
+                  {
+                    "id": "custom.stacking",
+                    "value": {
+                      "group": "A",
+                      "mode": "none"
+                    }
+                  },
+                  {
+                    "id": "custom.fillOpacity",
+                    "value": 0
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byFrameRefID",
+                  "options": "Storage_ch"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "purple",
+                      "mode": "fixed"
+                    }
+                  },
+                  {
+                    "id": "custom.stacking",
+                    "value": {
+                      "group": "A",
+                      "mode": "normal"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byFrameRefID",
+                  "options": "Storage_dis"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "purple",
+                      "mode": "fixed"
+                    }
+                  },
+                  {
+                    "id": "custom.stacking",
+                    "value": {
+                      "group": "A",
+                      "mode": "normal"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 10,
+            "w": 24,
+            "x": 0,
+            "y": 72
+          },
+          "id": 63,
+          "options": {
+            "legend": {
+              "calcs": [
+                "min",
+                "max",
+                "mean"
+              ],
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "mode": "multi",
+              "sort": "none"
+            }
+          },
+          "targets": [
+            {
+              "alias": "Hydro $tag_state",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "P87FC6A58DBBB0300"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "state"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "measurement": "reg_generation",
+              "orderByTime": "DESC",
+              "policy": "default",
+              "query": "SELECT sum(\"Generation [MW]\") FROM \"Reg_generation\" WHERE ((\"technology\" = 'Other renewable' OR \"technology\" = 'Geothermal' OR \"technology\" = 'Marine') AND \"state\" =~ /^$state$/ AND \"mode\"='api_version') AND $timeFilter GROUP BY time(1h), \"state\" fill(null) ORDER BY time DESC",
+              "rawQuery": false,
+              "refId": "Hydro",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Generation [MW]"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "condition": "AND",
+                  "key": "technology",
+                  "operator": "=",
+                  "value": "Hydro Run-of-river and poundage"
+                },
+                {
+                  "condition": "AND",
+                  "key": "state",
+                  "operator": "=~",
+                  "value": "/^$state$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "mode",
+                  "operator": "=~",
+                  "value": "/^$mode$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "balanced",
+                  "operator": "=",
+                  "value": "no"
+                }
+              ]
+            },
+            {
+              "alias": "Biomass $tag_state",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "P87FC6A58DBBB0300"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "state"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "measurement": "reg_generation",
+              "orderByTime": "DESC",
+              "policy": "default",
+              "query": "SELECT sum(\"Generation [MW]\") FROM \"Per_type_gen\" WHERE (\"technology\" = 'Biomass' AND \"country\" =~ /^$state$/) AND $timeFilter GROUP BY time(1h), \"country\" fill(null) ORDER BY time DESC",
+              "rawQuery": false,
+              "refId": "Biomass",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Generation [MW]"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "condition": "AND",
+                  "key": "technology",
+                  "operator": "=",
+                  "value": "Biomass"
+                },
+                {
+                  "condition": "AND",
+                  "key": "state",
+                  "operator": "=~",
+                  "value": "/^$state$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "mode",
+                  "operator": "=~",
+                  "value": "/^$mode$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "balanced",
+                  "operator": "=",
+                  "value": "no"
+                }
+              ]
+            },
+            {
+              "alias": "Nuclear $tag_state",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "P87FC6A58DBBB0300"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "state"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "reg_generation",
+              "orderByTime": "DESC",
+              "policy": "default",
+              "refId": "Nuclear",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Generation [MW]"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "condition": "AND",
+                  "key": "technology",
+                  "operator": "=",
+                  "value": "Nuclear"
+                },
+                {
+                  "condition": "AND",
+                  "key": "state",
+                  "operator": "=~",
+                  "value": "/^$state$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "mode",
+                  "operator": "=~",
+                  "value": "/^$mode$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "balanced",
+                  "operator": "=",
+                  "value": "no"
+                }
+              ]
+            },
+            {
+              "alias": "Lignite $tag_state",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "P87FC6A58DBBB0300"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "state"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "measurement": "reg_generation",
+              "orderByTime": "DESC",
+              "policy": "default",
+              "refId": "Lignite",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Generation [MW]"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "condition": "AND",
+                  "key": "technology",
+                  "operator": "=",
+                  "value": "Fossil Brown coal/Lignite"
+                },
+                {
+                  "condition": "AND",
+                  "key": "state",
+                  "operator": "=~",
+                  "value": "/^$state$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "mode",
+                  "operator": "=~",
+                  "value": "/^$mode$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "balanced",
+                  "operator": "=",
+                  "value": "no"
+                }
+              ]
+            },
+            {
+              "alias": "Hard coal $tag_state",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "P87FC6A58DBBB0300"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "state"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "measurement": "reg_generation",
+              "orderByTime": "DESC",
+              "policy": "default",
+              "refId": "Hard_coal",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Generation [MW]"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "condition": "AND",
+                  "key": "technology",
+                  "operator": "=",
+                  "value": "Fossil Hard coal"
+                },
+                {
+                  "condition": "AND",
+                  "key": "state",
+                  "operator": "=~",
+                  "value": "/^$state$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "mode",
+                  "operator": "=~",
+                  "value": "/^$mode$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "balanced",
+                  "operator": "=",
+                  "value": "no"
+                }
+              ]
+            },
+            {
+              "alias": "Fossil gas $tag_state",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "P87FC6A58DBBB0300"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "state"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "measurement": "reg_generation",
+              "orderByTime": "DESC",
+              "policy": "default",
+              "query": "SELECT sum(\"Generation [MW]\") FROM \"Per_type_gen\" WHERE ((\"technology\" = 'Fossil Gas' OR \"technology\" = 'Fossil Coal-derived gas') AND \"country\" =~ /^$state$/) AND $timeFilter GROUP BY time(1h), \"country\" fill(null) ORDER BY time DESC",
+              "rawQuery": false,
+              "refId": "CCGT",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Generation [MW]"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "condition": "AND",
+                  "key": "technology",
+                  "operator": "=",
+                  "value": "Fossil Gas"
+                },
+                {
+                  "condition": "AND",
+                  "key": "state",
+                  "operator": "=~",
+                  "value": "/^$state$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "mode",
+                  "operator": "=~",
+                  "value": "/^$mode$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "balanced",
+                  "operator": "=",
+                  "value": "no"
+                }
+              ]
+            },
+            {
+              "alias": "Oil $tag_state",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "P87FC6A58DBBB0300"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "state"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "measurement": "reg_generation",
+              "orderByTime": "DESC",
+              "policy": "default",
+              "query": "SELECT sum(\"Generation [MW]\") FROM \"Per_type_gen\" WHERE ((\"technology\" = 'Fossil Gas' OR \"technology\" = 'Fossil Coal-derived gas') AND \"country\" =~ /^$state$/) AND $timeFilter GROUP BY time(1h), \"country\" fill(null) ORDER BY time DESC",
+              "rawQuery": false,
+              "refId": "Oil",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Generation [MW]"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "condition": "AND",
+                  "key": "technology",
+                  "operator": "=",
+                  "value": "Fossil Oil"
+                },
+                {
+                  "condition": "AND",
+                  "key": "state",
+                  "operator": "=~",
+                  "value": "/^$state$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "mode",
+                  "operator": "=~",
+                  "value": "/^$mode$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "balanced",
+                  "operator": "=",
+                  "value": "no"
+                }
+              ]
+            },
+            {
+              "alias": "Other fossil $tag_state",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "P87FC6A58DBBB0300"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "state"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "measurement": "reg_generation",
+              "orderByTime": "DESC",
+              "policy": "default",
+              "query": "SELECT mean(\"Generation [MW]\") FROM \"reg_generation\" WHERE ((\"technology\" = 'Other' OR \"technology\" = 'Waste') AND \"state\" =~ /^$state$/ AND \"mode\" =~ /^$mode$/ AND \"balanced\" = 'no') AND $timeFilter GROUP BY time(1h), \"state\" fill(null) ORDER BY time DESC",
+              "rawQuery": true,
+              "refId": "Others",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Generation [MW]"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "sum"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "condition": "AND",
+                  "key": "technology",
+                  "operator": "=",
+                  "value": "Other"
+                },
+                {
+                  "condition": "AND",
+                  "key": "state",
+                  "operator": "=~",
+                  "value": "/^$state$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "mode",
+                  "operator": "=~",
+                  "value": "/^$mode$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "balanced",
+                  "operator": "=~",
+                  "value": "/^$balanced$/"
+                },
+                {
+                  "condition": "OR",
+                  "key": "technology",
+                  "operator": "=",
+                  "value": "Waste"
+                }
+              ]
+            },
+            {
+              "alias": "Wind Onshore $tag_state",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "P87FC6A58DBBB0300"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "state"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "measurement": "reg_generation",
+              "orderByTime": "DESC",
+              "policy": "default",
+              "query": "SELECT sum(\"Generation [MW]\") FROM \"reg_generation\" WHERE (\"technology\" = 'Wind Onshore' AND \"state\" =~ /^$state$/ AND \"mode\" =~ /^$mode$/ AND \"balanced\" = 'no') AND $timeFilter GROUP BY time(1h), \"state\" fill(null) ORDER BY time DESC",
+              "rawQuery": false,
+              "refId": "Wind_onshore",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Generation [MW]"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "condition": "AND",
+                  "key": "technology",
+                  "operator": "=",
+                  "value": "Wind Onshore"
+                },
+                {
+                  "condition": "AND",
+                  "key": "state",
+                  "operator": "=~",
+                  "value": "/^$state$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "mode",
+                  "operator": "=~",
+                  "value": "/^$mode$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "balanced",
+                  "operator": "=",
+                  "value": "no"
+                }
+              ]
+            },
+            {
+              "alias": "Wind Offshore $tag_state",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "P87FC6A58DBBB0300"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "state"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "measurement": "reg_generation",
+              "orderByTime": "DESC",
+              "policy": "default",
+              "refId": "Wind_offshore",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Generation [MW]"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "condition": "AND",
+                  "key": "technology",
+                  "operator": "=",
+                  "value": "Wind Offshore"
+                },
+                {
+                  "condition": "AND",
+                  "key": "state",
+                  "operator": "=~",
+                  "value": "/^$state$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "mode",
+                  "operator": "=~",
+                  "value": "/^$mode$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "balanced",
+                  "operator": "=",
+                  "value": "no"
+                }
+              ]
+            },
+            {
+              "alias": "Solar $tag_state",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "P87FC6A58DBBB0300"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "state"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "measurement": "reg_generation",
+              "orderByTime": "DESC",
+              "policy": "default",
+              "query": "SELECT sum(\"Total capacity\")  / 4 FROM \"Capacities\" WHERE (\"simulationID\" =~ /^$Scenario$/ AND \"technology\" = 'Renewable' AND \"UnitName\" = 'Solar [MW]') AND $timeFilter GROUP BY time(1h), \"technology\", \"UnitName\" fill(null) ORDER BY time DESC",
+              "rawQuery": false,
+              "refId": "Solar",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Generation [MW]"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "condition": "AND",
+                  "key": "technology",
+                  "operator": "=",
+                  "value": "Solar"
+                },
+                {
+                  "condition": "AND",
+                  "key": "state",
+                  "operator": "=~",
+                  "value": "/^$state$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "mode",
+                  "operator": "=~",
+                  "value": "/^$mode$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "balanced",
+                  "operator": "=",
+                  "value": "no"
+                }
+              ]
+            },
+            {
+              "alias": "Other VRE $tag_state",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "P87FC6A58DBBB0300"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "state"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "measurement": "reg_generation",
+              "orderByTime": "DESC",
+              "policy": "default",
+              "query": "SELECT sum(\"Generation [MW]\") FROM \"Reg_generation\" WHERE ((\"technology\" = 'Other renewable' OR \"technology\" = 'Geothermal' OR \"technology\" = 'Marine') AND \"state\" =~ /^$state$/ AND \"mode\"='api_version') AND $timeFilter GROUP BY time(1h), \"state\" fill(null) ORDER BY time DESC",
+              "rawQuery": false,
+              "refId": "Other VRE",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Generation [MW]"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "condition": "AND",
+                  "key": "technology",
+                  "operator": "=",
+                  "value": "Geothermal"
+                },
+                {
+                  "condition": "AND",
+                  "key": "state",
+                  "operator": "=~",
+                  "value": "/^$state$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "mode",
+                  "operator": "=~",
+                  "value": "/^$mode$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "balanced",
+                  "operator": "=",
+                  "value": "no"
+                }
+              ]
+            },
+            {
+              "alias": "Storage charge $tag_state",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "P87FC6A58DBBB0300"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "state"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "measurement": "reg_generation",
+              "orderByTime": "DESC",
+              "policy": "default",
+              "query": "SELECT mean(\"Generation [MW]\") FROM \"reg_generation\" WHERE (\"technology\" = 'Hydro Pumped Storage' AND \"state\" =~ /^$state$/ AND \"mode\" =~ /^$mode$/ AND \"balanced\" = 'no' AND \"Generation [MW]\" < 0) AND $timeFilter GROUP BY time(1h), \"state\" fill(null) ORDER BY time DESC",
+              "rawQuery": true,
+              "refId": "Storage_ch",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Generation [MW]"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "condition": "AND",
+                  "key": "technology",
+                  "operator": "=",
+                  "value": "Hydro Pumped Storage"
+                },
+                {
+                  "condition": "AND",
+                  "key": "state",
+                  "operator": "=~",
+                  "value": "/^$state$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "mode",
+                  "operator": "=~",
+                  "value": "/^$mode$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "balanced",
+                  "operator": "=~",
+                  "value": "/^$balanced$/"
+                }
+              ]
+            },
+            {
+              "alias": "Storage discharge $tag_state",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "P87FC6A58DBBB0300"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "country"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "measurement": "reg_generation",
+              "orderByTime": "DESC",
+              "policy": "default",
+              "query": "SELECT mean(\"Generation [MW]\") FROM \"reg_generation\" WHERE (\"technology\" = 'Hydro Pumped Storage' AND \"state\" =~ /^$state$/ AND \"mode\" =~ /^$mode$/ AND \"balanced\" = 'no' AND \"Generation [MW]\" >= 0) AND $timeFilter GROUP BY time(1h), \"state\" fill(null) ORDER BY time DESC",
+              "rawQuery": true,
+              "refId": "Storage_dis",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Generation [MW]"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "condition": "AND",
+                  "key": "technology",
+                  "operator": "=",
+                  "value": "Hydro"
+                },
+                {
+                  "condition": "AND",
+                  "key": "state",
+                  "operator": "=~",
+                  "value": "/^$state$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "mode",
+                  "operator": "=",
+                  "value": "api_version"
+                }
+              ]
+            }
+          ],
+          "title": "Generation per state (unbalanced)",
+          "type": "timeseries"
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P87FC6A58DBBB0300"
+          },
+          "description": "",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "Capacity",
+                "axisPlacement": "auto",
+                "barAlignment": 1,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "lineInterpolation": "smooth",
+                "lineStyle": {
+                  "fill": "solid"
+                },
+                "lineWidth": 1,
+                "pointSize": 1,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "normal"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  }
+                ]
+              },
+              "unit": "megwatt"
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byFrameRefID",
+                  "options": "demand"
+                },
+                "properties": [
+                  {
+                    "id": "color",
+                    "value": {
+                      "fixedColor": "text",
+                      "mode": "fixed"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 10,
+            "w": 24,
+            "x": 0,
+            "y": 82
+          },
+          "id": 53,
+          "options": {
+            "legend": {
+              "calcs": [
+                "min",
+                "max",
+                "mean"
+              ],
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "mode": "multi",
+              "sort": "none"
+            }
+          },
+          "targets": [
+            {
+              "alias": "Demand $tag_state",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "P87FC6A58DBBB0300"
+              },
+              "groupBy": [
+                {
+                  "params": [
+                    "1h"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "state"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "measurement": "reg_demand",
+              "orderByTime": "ASC",
+              "policy": "default",
+              "refId": "demand",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "Demand [MW]"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "state",
+                  "operator": "=~",
+                  "value": "/^$state$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "balanced",
+                  "operator": "=",
+                  "value": "no"
+                }
+              ]
+            }
+          ],
+          "title": "Demand in $state (unbalanced)",
+          "type": "timeseries"
+        }
+      ],
+      "title": "Regionalized data",
+      "type": "row"
+    }
+  ],
+  "refresh": false,
+  "revision": 1,
+  "schemaVersion": 37,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "DE",
+          "value": "DE"
+        },
+        "datasource": {
+          "type": "influxdb",
+          "uid": "P87FC6A58DBBB0300"
+        },
+        "definition": "SHOW TAG VALUES WITH KEY = \"country\" ",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "country",
+        "options": [],
+        "query": "SHOW TAG VALUES WITH KEY = \"country\" ",
+        "refresh": 2,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "BB",
+          "value": "BB"
+        },
+        "datasource": {
+          "type": "influxdb",
+          "uid": "P87FC6A58DBBB0300"
+        },
+        "definition": "SHOW TAG VALUES WITH KEY = \"state\" WHERE value != 'Common'",
+        "hide": 0,
+        "includeAll": false,
+        "multi": true,
+        "name": "state",
+        "options": [],
+        "query": "SHOW TAG VALUES WITH KEY = \"state\" WHERE value != 'Common'",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": [
+            "with_per_unit"
+          ],
+          "value": [
+            "with_per_unit"
+          ]
+        },
+        "datasource": {
+          "type": "influxdb",
+          "uid": "P87FC6A58DBBB0300"
+        },
+        "definition": "SHOW TAG VALUES WITH KEY = \"mode\"",
+        "hide": 0,
+        "includeAll": false,
+        "multi": true,
+        "name": "mode",
+        "options": [],
+        "query": "SHOW TAG VALUES WITH KEY = \"mode\"",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "2022-01-01T00:00:00.000Z",
+    "to": "2022-01-31T23:59:59.000Z"
+  },
+  "timepicker": {},
+  "timezone": "utc",
+  "title": "Data validation",
+  "uid": "_bmWotVSz",
+  "version": 18,
+  "weekStart": ""
+}

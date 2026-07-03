@@ -1,0 +1,31 @@
+countries:
+  - "DE_LU"        # Germany & Luxembourg (combined)
+
+country_borders:
+  # Standard neighbors
+  - "DE_LU-CH"       # Germany/Luxembourg → Switzerland
+  - "BE-DE_LU"       # Belgium → Germany/Luxembourg
+  - "CZ-DE_LU"       # Czech Republic → Germany/Luxembourg
+  - "FR-DE_LU"       # France → Germany/Luxembourg
+  - "DE_LU-NL"       # Germany/Luxembourg → Netherlands
+  - "DE_LU-PL"       # Germany/Luxembourg → Poland
+  - "DK_1-DE_LU"     # Denmark (zone 1) → Germany/Luxembourg
+  - "DK_2-DE_LU"     # Denmark (zone 2) → Germany/Luxembourg
+  - "DE_LU-AT"       # Germany/Luxembourg → Austria
+  - "DE_LU-10Y1001A1001A47J" # Germany/Luxembourg → Sweden SE4
+  - "DE_LU-10YNO-2--------T" # Germany/Luxembourg → Norway NO2
+
+states:
+  - "BB"
+  - "BW"
+  - "BY"
+  - "HE"
+  - "MV"
+  - "NI"
+  - "NW"
+  - "RP"
+  - "SH"
+  - "SL"
+  - "SN"
+  - "ST"
+  - "TH"

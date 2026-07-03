@@ -1,0 +1,70 @@
+countries:
+  - "AT"           # Austria
+  - "BE"           # Belgium
+  - "BG"           # Bulgaria
+  - "CH"           # Switzerland
+  - "CZ"           # Czech Republic
+  - "DK_1"         # Denmark – bidding zone 1
+  - "DK_2"         # Denmark – bidding zone 2
+  - "EE"           # Estonia
+  - "FI"           # Finland
+  - "FR"           # France
+  - "DE_LU"        # Germany & Luxembourg (combined)
+  - "GR"           # Greece
+  - "HR"           # Croatia
+  - "HU"           # Hungary
+  - "IT_NORD"      # Italy – Northern zone
+  - "IT_SUD"       # Italy – Southern zone
+  - "LV"           # Latvia
+  - "LT"           # Lithuania
+  - "NL"           # Netherlands
+  - "PL"           # Poland
+  - "PT"           # Portugal
+  - "RO"           # Romania
+  - "SI"           # Slovenia
+  - "ES"           # Spain
+  - "SE_1"         # Sweden – bidding zone 1
+  - "SE_2"         # Sweden – bidding zone 2
+
+country_borders:
+  - "DE_LU-CH"         # Germany/Luxembourg → Switzerland
+  - "AT-CZ"            # Austria → Czech Republic
+  - "AT-HU"            # Austria → Hungary
+  - "AT-IT_NORD"       # Austria → Italy (Northern zone)
+  - "AT-SI"            # Austria → Slovenia
+  - "AT-CH"            # Austria → Switzerland
+  - "BE-FR"            # Belgium → France
+  - "BE-NL"            # Belgium → Netherlands
+  - "BE-DE_LU"         # Belgium → Germany/Luxembourg
+  - "BG-RO"            # Bulgaria → Romania
+  - "CH-DE_LU"         # Switzerland → Germany/Luxembourg
+  - "CZ-DE_LU"         # Czech Republic → Germany/Luxembourg
+  - "CZ-PL"            # Czech Republic → Poland
+  - "CZ-AT"            # Czech Republic → Austria
+  - "DK_1-DE_LU"       # Denmark (zone 1) → Germany/Luxembourg
+  - "DK_2-DE_LU"       # Denmark (zone 2) → Germany/Luxembourg
+  - "EE-FI"            # Estonia → Finland
+  - "EE-LV"            # Estonia → Latvia
+  - "FI-SE_1"          # Finland → Sweden (zone 1)
+  - "FR-DE_LU"         # France → Germany/Luxembourg
+  - "FR-IT_NORD"       # France → Italy (Northern zone)
+  - "FR-ES"            # France → Spain
+  - "DE_LU-NL"         # Germany/Luxembourg → Netherlands
+  - "DE_LU-PL"         # Germany/Luxembourg → Poland
+  - "HU-AT"            # Hungary → Austria
+  - "HU-RO"            # Hungary → Romania
+  - "HR-SI"            # Croatia → Slovenia
+  - "HR-HU"            # Croatia → Hungary
+  - "LV-LT"            # Latvia → Lithuania
+  - "LV-EE"            # Latvia → Estonia
+  - "LT-PL"            # Lithuania → Poland
+  - "NL-BE"            # Netherlands → Belgium
+  - "PL-CZ"            # Poland → Czech Republic
+  - "PL-LT"            # Poland → Lithuania
+  - "PT-ES"            # Portugal → Spain
+  - "RO-BG"            # Romania → Bulgaria
+  - "RO-HU"            # Romania → Hungary
+  - "SI-AT"            # Slovenia → Austria
+  - "SI-HR"            # Slovenia → Croatia
+  - "ES-FR"            # Spain → France
+  - "ES-PT"            # Spain → Portugal

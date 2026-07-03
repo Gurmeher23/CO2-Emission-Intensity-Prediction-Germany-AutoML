@@ -1,0 +1,266 @@
+# in this file you can configure the settings for the data download
+
+# the following control areas will be used to download per unit data
+# change or improve if needed
+states:
+  Brandenburg: BB
+  Baden-Württemberg: BW
+  Bayern: BY
+  Hessen: HE
+  Mecklenburg-Vorpommern: MV
+  Niedersachsen: NI
+  Nordrhein-Westfalen: NW
+  Rheinland-Pfalz: RP
+  Schleswig-Holstein: SH
+  Saarland: SL
+  Sachsen: SN
+  Sachsen-Anhalt: ST
+  Thüringen: TH
+
+control_areas:
+    TransnetBW: "10YDE-ENBW-----N"
+    TenneT: "10YDE-EON------1"
+    Amprion: "10YDE-RWENET---I"
+    50Hertz: "10YDE-VE-------2"
+
+nuts2_to_state:
+    "DE_DE1": "DE_BW"  # Baden-Württemberg
+    "DE_DE2": "DE_BY"  # Bayern
+    "DE_DE4": "DE_BB"  # Brandenburg
+    "DE_DE7": "DE_HE"  # Hessen
+    "DE_DE8": "DE_MV"  # Mecklenburg-Vorpommern
+    "DE_DE9": "DE_NI"  # Niedersachsen
+    "DE_DEA": "DE_NW"  # Nordrhein-Westfalen
+    "DE_DEB": "DE_RP"  # Rheinland-Pfalz
+    "DE_DEC": "DE_SL"  # Saarland
+    "DE_DED": "DE_SN"  # Sachsen
+    "DE_DEE": "DE_ST"  # Sachsen-Anhalt
+    "DE_DEF": "DE_SH"  # Schleswig-Holstein
+    "DE_DEG": "DE_TH"  # Thüringen
+
+flow_tracing_method: aggregated
+
+flow_tracing_methods:
+  aggregated:
+    method: "Average participation"
+    aggregated: true
+    dims: ["source", "sink"]
+  direct:
+    method: "Average participation"
+    aggregated: false
+    dims: ["source", "sink"]
+
+# the following country codes will be used to download per type data
+# change or improve if needed
+countries:
+  - 'AL'
+  - 'AT'
+  - 'BA'
+  - 'BE'
+  - 'BG'
+  - 'CH'
+  - 'CZ'
+  - 'DE'
+  - 'DK'
+  - 'EE'
+  - 'ES'
+  - 'FI'
+  - 'FR'
+  - 'GB'
+  - 'GR'
+  - 'HR'
+  - 'HU'
+  - 'IE'
+  - 'IT'
+  - 'LT'
+  - 'LU'
+  - 'LV'
+  - 'ME'
+  - 'MK'
+  - 'NL'
+  - 'NO'
+  - 'PL'
+  - 'PT'
+  - 'RO'
+  - 'RS'
+  - 'SE'
+  - 'SI'
+  - 'SK'
+
+#countries_for_forecast:
+#  - 'DE'
+#  - 'DK'
+#  - 'NL'
+#  - 'BE'
+#  - 'LU'
+#  - 'FR'
+#  - 'CH'
+#  - 'AT'
+#  - 'CZ'
+#  - 'PL'
+
+countries_for_forecast:
+  - 'AL'
+  - 'AT'
+  - 'BA'
+  - 'BE'
+  - 'BG'
+  - 'CH'
+  - 'CZ'
+  - 'DE'
+  - 'DK'
+  - 'EE'
+  - 'ES'
+  - 'FI'
+  - 'FR'
+  - 'GB'
+  - 'GR'
+  - 'HR'
+  - 'HU'
+  - 'IE'
+  - 'IT'
+  - 'LT'
+  - 'LU'
+  - 'LV'
+  - 'ME'
+  - 'MK'
+  - 'NL'
+  - 'NO'
+  - 'PL'
+  - 'PT'
+  - 'RO'
+  - 'RS'
+  - 'SE'
+  - 'SI'
+  - 'SK'
+
+country_borders:
+  - 'AL-GR'
+  - 'AL-ME'
+  - 'AL-MK'
+  - 'AL-RS'
+  - 'AT-CH'
+  - 'AT-CZ'
+  - 'AT-DE'
+  - 'AT-HU'
+  - 'AT-IT'
+  - 'AT-SI'
+  - 'BA-HR'
+  - 'BA-ME'
+  - 'BA-RS'
+  - 'BE-FR'
+  - 'BE-LU'
+  - 'BE-NL'
+  - 'BG-GR'
+  - 'BG-MK'
+  - 'BG-RO'
+  - 'BG-RS'
+  - 'CH-DE'
+  - 'CH-FR'
+  - 'CH-IT'
+  - 'CZ-DE'
+  - 'CZ-PL'
+  - 'CZ-SK'
+  - 'DE-PL'
+  - 'DE-DK'
+  - 'DE-NL'
+  - 'DE-FR'
+  - 'DE-LU'
+  - 'DK-SE'
+  - 'EE-LV'
+  - 'ES-FR'
+  - 'ES-PT'
+  - 'FI-SE'
+  - 'FR-IT'
+  - 'GR-MK'
+  - 'HR-HU'
+  - 'HR-RS'
+  - 'HR-SI'
+  - 'HU-RO'
+  - 'HU-RS'
+  - 'HU-SK'
+  - 'IT-SI'
+  - 'LT-LV'
+  - 'ME-RS'
+  - 'MK-RS'
+  - 'NO-SE'
+  - 'PL-SK'
+  - 'RO-RS'
+  - 'GR-IT'
+  - 'IT-ME'
+  - 'BE-DE'
+  - 'GB-NL'
+  - 'FR-GB'
+  - 'LT-SE'
+  - 'DE-SE'
+  - 'PL-SE'
+  - 'DK-NL'
+  - 'NL-NO'
+  - 'DE-NO'
+  - 'EE-FI'
+  - 'BE-GB'
+  - 'DK-GB'
+  - 'DE-GB'
+  - 'GB-IE'
+  - 'FR-IE'
+  - 'LT-PL'
+  - 'GB-NO'
+  - 'DK-NO'
+
+internal_sigma_weights:
+  priority:
+    DE: 0
+  specific:
+    DE:
+      generation: 100000
+      demand: 100000
+      flow: 1000
+  default:
+    generation: 100
+    demand: 100
+    flow: 1
+    
+internal_sigma_thresholds:
+  priority:
+    DE: 0
+  specific:
+    DE:
+      generation: 0.000001
+      demand: 0.000001
+      flow: 0.000001
+  default:
+    generation: 0.1
+    demand: 0.1
+    flow: 0.1
+
+MaStr:
+  crs: epsg:4326  # coordinate system
+  default:
+    decommissioning date: 2045-01-01
+  postcodes:
+    path: inputs/shapefiles/plz  # path for postcode list
+    name: OSM_PLZ.shp  # name of postcode list
+  capacity threshold: 0.001  # filter for minimum capacity of unit in MW
+  technologies:
+    carrier mapping:
+      path: inputs/generation_data  # path of carrier mapping list
+      name: MaStr_gen_types.csv  # name of carrier mapping list
+    solar:
+      azimuth mapping:  # specific mapping of azimuth angles for solar generation
+        Ost: 90.0
+        Süd: 180
+        West: 270.0
+        Nord: 360.0
+        Süd-Ost: 135.0
+        Süd-West: 225.0
+        Nord-Ost: 45.0
+        Nord-West: 315.0
+  dask:  # settings for parallelization
+    workers: 12  # number of workers
+    threads: 4  # number of threads per worker
+    steps: 10000  # steps used in region mapping for parallelization
+
+Shapefiles:
+  states:
+    path: inputs/shapefiles/states.geojson  # path for shapefiles
+    identifier: NUTS_ID  # identifier for shapefile names

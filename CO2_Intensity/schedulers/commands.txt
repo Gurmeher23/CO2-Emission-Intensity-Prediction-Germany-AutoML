@@ -1,0 +1,9 @@
+& to send to background
+jobs -l list background jobs
+disown -h %[process] to disown process to run in the background without shell
+ps aufx see all processes
+pgrep -l python see all python processes
+ps PID see process description
+kill PID kill process with this PID
+pkill python kill all python processes
+systemctl <start/restart/stop> co2mapapi
